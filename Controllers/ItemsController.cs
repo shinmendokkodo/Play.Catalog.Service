@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Play.Catalog.Service.Extensions;
 using Play.Catalog.Service.Models.Dtos;
 using Play.Catalog.Service.Models.Entities;
-using Play.Catalog.Service.Repositories;
+using Play.Catalog.Service.Repositories.Interfaces;
 
 namespace Play.Catalog.Service.Controllers
 {
@@ -14,7 +14,12 @@ namespace Play.Catalog.Service.Controllers
     [Route("items")]
     public class ItemsController : ControllerBase
     {
-        private readonly ItemsRepository itemsRepository = new();
+        private readonly IItemsRepository itemsRepository;
+
+        public ItemsController(IItemsRepository itemsRepository)
+        {
+            this.itemsRepository = itemsRepository;
+        }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ItemDto>>> GetAllAsync()
