@@ -1,0 +1,33 @@
+### GET Request
+
+GET https://localhost:5001/items
+
+### POST Request
+
+POST https://localhost:5001/items HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Atsa",
+  "description": "HP",
+  "price": 1
+}
+
+### GET by id
+
+GET https://localhost:5001/items/06b5c402-4195-474b-9443-9affd6f1fcbb
+
+### PUT
+
+PUT https://localhost:5001/items/06b5c402-4195-474b-9443-9affd6f1fcbb HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Atsar",
+  "description": "HP more",
+  "price": 34
+}
+
+### DELETE
+
+DELETE https://localhost:5001/items/06b5c402-4195-474b-9443-9affd6f1fcbb HTTP/1.1
