@@ -4,7 +4,7 @@ using Play.Catalog.Service.Models.Entities;
 
 namespace Play.Catalog.Service.Extensions
 {
-    public static class Extension
+    public static class ItemExtension
     {
         public static ItemDto AsDto(this Item item)
         {

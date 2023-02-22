@@ -1,8 +1,9 @@
 using System;
+using Play.Common.Entities;
 
 namespace Play.Catalog.Service.Models.Entities
 {
-    public class Item
+    public class Item : IEntity
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
