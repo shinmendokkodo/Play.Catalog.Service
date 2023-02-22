@@ -27,6 +27,8 @@ namespace Play.Catalog.Service
 
             services.AddMongo().AddMongoRepository<Item>("items");
 
+            services.AddMassTransitWithRabbitMq();
+
             services.AddControllers(options =>
             {
                 /** 
